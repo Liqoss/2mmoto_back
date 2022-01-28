@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
-const stripe = require('stripe')('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')
+const stripe = require('stripe')(process.env.STRIPE_SECRET_TEST)
 const cors = require('cors')
 const { v4: uuidv4 } = require('uuid');
 uuidv4(); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
